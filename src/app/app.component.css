@@ -1,0 +1,21 @@
+h1{
+    margin:20px auto;
+    width:100%;
+    text-align: center;
+    font-size: 40px;
+}
+section{
+    margin-left: 5em;
+}
+h3{
+    font-size: 36px;
+}
+p{
+    font-size: 28px;
+}
+li{
+    font-size: 32px;
+}
+img{
+    height:15rem;
+}

@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "AnonymousPro";
+    src: url(assets\AnonymousPro-Regular.ttf);
+    font-display: swap;
+  }
+
+body{
+    font-family: 'AnonymousPro', Tahoma, Geneva, Verdana, sans-serif;
+}
