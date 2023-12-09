@@ -1,0 +1,10 @@
+<div class="grid grid-cols-4 gap-4 m-6">
+    <div *ngFor="let unit of units" class="h-full container m-auto border rounded-md border-green-400 border-spacing-1 max-w-md hover:bg-green-400">
+        <a routerLink="{{unit.link}}">
+            <img class="mx-auto" [src]="unit.imageUrl">
+            <h3 class="text-lg text-center">{{unit.title}}</h3>
+            <p class="m-2 p-1 text-center overflow-auto"><span class="font-semibold font-serif">Description:</span> {{unit.description}}</p>
+        </a>
+    </div>
+</div>
+
