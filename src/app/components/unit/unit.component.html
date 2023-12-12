@@ -1,0 +1,9 @@
+<section class="mx-24">
+    <h3 class="text-4xl mt-4 mb-4">{{unit.title}}</h3>
+    <img *ngIf="unit.imageUrl" class="w-1/3 mx-auto" [src]=unit.imageUrl>
+    <ul *ngFor="let challenge of unit.challenges; let i = index">
+        <ctfk-challenge [step]="i+1" [challenge]="challenge" [starterLink]="unit.starterLink"></ctfk-challenge>
+    </ul>
+  </section>
+
+

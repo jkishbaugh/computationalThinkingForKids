@@ -1,4 +1,7 @@
-<div>
-  <p class="text-xl p-1">Have Scratch Cat ask for your name and then repeat it.</p>
-  <img src="assets/talkingCat1.gif" />
-</div>
+<li *ngIf="starterLink && step===1" class="m-20"><span class="text-3xl font-semibold mr-5">Step {{step}}:</span>     <button
+  type="button"
+  class="inline-block rounded bg-cyan-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-cyan-400 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-cyan-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"><a class="text-neutral-900 mb-7" [href]="starterLink" target="_blank">{{challenge.challengeDetails}}</a></button></li>
+<li *ngIf="!starterLink || step !==1" class="m-20"><span class="text-3xl font-semibold mr-5">Step {{step}}:</span>{{challenge.challengeDetails}}
+  <span class="italic mr-2">(hint): {{challenge.hint}}</span>
+  <ctfk-colored-circle *ngFor="let bt of challenge.blockTypes" [color]="bt" [tooltipText]="setToolTipText(bt)"></ctfk-colored-circle>
+</li>

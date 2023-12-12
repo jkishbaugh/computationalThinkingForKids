@@ -1,3 +1,6 @@
-<div class="container ml-4">
-    <ctfk-challenge class="mx-auto"></ctfk-challenge>
+<div class="ml-4 pb-40">
+    <ctfk-header></ctfk-header>
+    <ctfk-unit-list *ngIf="!selectedUnit.title" (unitClicked)="handleUnitClick($event)"> </ctfk-unit-list>
+    <ctfk-unit *ngIf="selectedUnit.title" [unit]=" selectedUnit"> </ctfk-unit>
+
 </div>

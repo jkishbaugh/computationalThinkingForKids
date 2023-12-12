@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Unit } from '../unit-list/unit';
-import { UnitService } from '../unit-list/unit.service';
+import { Unit } from '../../interfaces/unit';
+import { UnitService } from '../../services/unit.service';
 
 @Component({
   selector: 'ctfk-gif',
@@ -13,9 +13,9 @@ export class GifComponent implements OnInit{
     title: '',
     starterLink: '',
     description: '',
-    challenges: [],
     imageUrl: '',
-    link: ''
+    link: '',
+    challenges: []
   }
   constructor(private unitService: UnitService){}
 

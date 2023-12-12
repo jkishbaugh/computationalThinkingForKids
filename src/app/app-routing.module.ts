@@ -13,7 +13,8 @@ const routes: Routes = [
   {path: 'gif', component: GifComponent},
   {path: 'pong', component: PongComponent},
   {path: 'paint', component: PaintComponent},
-  {path: '', component: UnitListComponent}
+  {path: 'home', component: HomeComponent},
+  {path: '', component: HomeComponent}
 ];
 
 @NgModule({

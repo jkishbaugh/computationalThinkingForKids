@@ -1,5 +1,6 @@
 export interface Challenge {
     resourceUrl: string
-    details: string,
-    blockTypes: string[]
+    challengeDetails: string
+    blockTypes: string[],
+    hint: string
 }

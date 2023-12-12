@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 export class ColoredCircleComponent {
   @Input() color: string ='bg-red'
   @Input() tooltipText: string = 'Default Tooltip Text';
+
 }
