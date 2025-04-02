@@ -1,0 +1,6 @@
+[submodule "frontend-ctfk"]
+	path = frontend-ctfk
+	url = https://github.com/jkishbaugh/frontend-ctfk.git
+[submodule "backend-ctfk"]
+	path = backend-ctfk
+	url = https://github.com/jkishbaugh/backend-ctfk.git

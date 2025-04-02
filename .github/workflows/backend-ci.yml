@@ -1,0 +1,49 @@
+name: Backend CI
+
+on:
+  push:
+    paths:
+      - 'backend-python/**'
+  pull_request:
+    paths:
+      - 'backend-python/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend-python
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        submodules: recursive
+
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.11'
+
+    - name: Install Poetry
+      run: |
+        curl -sSL https://install.python-poetry.org | python3 -
+        echo "$HOME/.poetry/bin" >> $GITHUB_PATH
+
+    - name: Install Dependencies
+      run: |
+        poetry config virtualenvs.create false
+        poetry install
+
+    - name: Lint with Flake8
+      run: |
+        pip install flake8
+        flake8 .
+
+    - name: Run Tests
+      run: |
+        pip install pytest
+        pytest tests/
+
+    - name: Build
+      run: poetry build

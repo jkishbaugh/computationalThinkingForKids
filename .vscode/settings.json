@@ -1,0 +1,10 @@
+{
+    "python.pythonPath": "/home/unnamed/.cache/pypoetry/virtualenvs/backend-python-AVIu28iM-py3.12",
+    "python.analysis.extraPaths": ["./src"],
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.ruffEnabled": true,
+    "python.terminal.activateEnvironment": true,
+    "python.poetryPath": "poetry",
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv",
+}
